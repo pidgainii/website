@@ -1,0 +1,129 @@
+<section id="projects" class="mx-auto max-w-5xl px-6 py-24 border-t border-slate-200 dark:border-white/10 transition-colors">
+  <span class="eyebrow font-mono text-xs font-medium text-slate-500 dark:text-slate-500">04 — proyects</span>
+  <h2 class="mt-2 font-display text-3xl font-bold tracking-tight text-ink dark:text-white">
+    Featured Projects
+  </h2>
+
+  <div class="mt-12 grid gap-6 md:grid-cols-2">
+    <!-- Simulator -->
+    <button
+      type="button"
+      onclick="document.getElementById('project-simulator').showModal()"
+      class="group text-left cursor-pointer rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-surface-dark p-8 shadow-sm hover:shadow-lg hover:border-accent/40 dark:hover:border-accent-dark/40 hover:-translate-y-1 transition-all flex flex-col justify-between"
+    >
+      <div>
+        <h3 class="font-display text-xl font-bold text-ink dark:text-white">C++ / OpenGL Simulator</h3>
+        <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+          3D Simulator built with C++ and OpenGL to study trajectory tracking and collision avoidance algorithms for multi-agent systems
+        </p>
+      </div>
+      <div class="mt-6 flex items-center justify-between">
+        <div class="flex gap-2">
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">C++</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">OpenGL</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">ImGUI</span>
+        </div>
+        <span class="flex items-center gap-1 text-sm font-medium text-accent dark:text-accent-dark opacity-0 group-hover:opacity-100 translate-x-[-4px] group-hover:translate-x-0 transition-all">
+          View project
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </span>
+      </div>
+    </button>
+
+    <!-- MyTour -->
+    <button
+      type="button"
+      onclick="document.getElementById('project-mytour').showModal()"
+      class="group text-left cursor-pointer rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-surface-dark p-8 shadow-sm hover:shadow-lg hover:border-accent/40 dark:hover:border-accent-dark/40 hover:-translate-y-1 transition-all flex flex-col justify-between"
+    >
+      <div>
+        <h3 class="font-display text-xl font-bold text-ink dark:text-white">MyTour</h3>
+        <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+          Application where guides can upload their tours adding multimedia content and tourists can
+          search and enjoy their favourite tours
+        </p>
+      </div>
+      <div class="mt-6 flex items-center justify-between">
+        <div class="flex gap-2">
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">Java</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">PostgreSQL</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">Docker</span>
+        </div>
+        <span class="flex items-center gap-1 text-sm font-medium text-accent dark:text-accent-dark opacity-0 group-hover:opacity-100 translate-x-[-4px] group-hover:translate-x-0 transition-all">
+          View project
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </span>
+      </div>
+    </button>
+  </div>
+
+
+
+
+
+  <!-- Dialog: Simulador -->
+  <dialog
+    id="project-simulator"
+    class="backdrop:bg-black/70 bg-transparent p-0 max-w-4xl w-[95vw] rounded-2xl m-auto"
+    onclick="if(event.target===this) this.close()"
+  >
+    <div class="relative h-[90vh] w-full flex flex-col rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 shadow-2xl p-6 md:p-10">
+      <button type="button" onclick="document.getElementById('project-simulator').close()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-white/20 transition z-10">✕</button>
+
+      <div class="shrink-0 pr-10">
+        <h3 class="font-display text-2xl md:text-3xl font-bold text-ink dark:text-white">C++ / OpenGL Simulator</h3>
+        <div class="mt-2 flex gap-2">
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">C++</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">OpenGL</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">ImGUI</span>
+        </div>
+        <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">
+          3D Simulator built with C++ and OpenGL to study trajectory tracking and collision avoidance algorithms for multi-agent systems.
+        </p>
+      </div>
+
+      <div class="mt-6 flex-1 min-h-0 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 -mx-1 px-1 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:bg-slate-300 dark:[&::-webkit-scrollbar-thumb]:bg-slate-600 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
+        <img src="/simulator/simulator1.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+        <img src="/simulator/simulator2.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+        <img src="/simulator/simulator3.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+        <img src="/simulator/demo.gif" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Dialog: MyTour -->
+  <dialog
+    id="project-mytour"
+    class="backdrop:bg-black/70 bg-transparent p-0 max-w-4xl w-[95vw] rounded-2xl m-auto"
+    onclick="if(event.target===this) this.close()"
+  >
+    <div class="relative h-[90vh] w-full flex flex-col rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 shadow-2xl p-6 md:p-10">
+      <button type="button" onclick="document.getElementById('project-mytour').close()" class="absolute top-4 right-4 w-8 h-8 rounded-full bg-slate-100 dark:bg-white/10 flex items-center justify-center text-slate-600 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-white/20 transition z-10">✕</button>
+
+      <div class="shrink-0 pr-10">
+        <h3 class="font-display text-2xl md:text-3xl font-bold text-ink dark:text-white">MyTour</h3>
+        <div class="mt-2 flex gap-2">
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">React Native</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">Java</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">Spring Boot</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">PostgreSQL</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">Docker</span>
+        </div>
+        <p class="mt-4 text-slate-600 dark:text-slate-400 text-sm md:text-base leading-relaxed">
+          MyTour is a mobile application created for city guides and tourists. Guides can create their own tours by adding sites of interest 
+          with their multimedia content. Tourists can search for their favourite tours and enjoy them by following the mapped route.
+          This application was built together with Samuel Pérez Vos and Gabriel Ranalli Cerdeira
+        </p>
+      </div>
+
+      <div class="mt-6 flex-1 min-h-0 flex gap-4 overflow-x-auto snap-x snap-mandatory pb-2 -mx-1 px-1 [&::-webkit-scrollbar]:h-1.5 [&::-webkit-scrollbar-thumb]:bg-slate-300 dark:[&::-webkit-scrollbar-thumb]:bg-slate-600 [&::-webkit-scrollbar-thumb]:rounded-full [&::-webkit-scrollbar-track]:bg-transparent">
+        <img src="/mytour/signupscreen.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+        <img src="/mytour/creatingtour.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+        <img src="/mytour/pickinglocation.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+        <img src="/mytour/exploringtour.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+        <img src="/mytour/enjoyingtour.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+        <img src="/mytour/followingtour.png" class="snap-center shrink-0 h-full w-auto max-w-[92vw] sm:max-w-[85%] rounded-xl border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-white/5 object-contain p-2" />
+      </div>
+    </div>
+  </dialog>
+</section>

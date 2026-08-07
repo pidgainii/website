@@ -1,0 +1,92 @@
+---
+const qualities = [
+  {
+    title: "Fast Adaptation",
+    description:
+      "I consider myself a person who adapts quickly to new environments and is able to learn new technologies in a quick and effective way.",
+  },
+  {
+    title: "Good Communication",
+    description:
+      "Although I am not an extrovert, I regard myself as a person who communicates effectively and is able to express my ideas clearly.",
+  },
+  {
+    title: "Organization & Teamwork",
+    description:
+      "I am an organized person who always tries to get the work done properly, always trying to leave it as clean as possible so that the teammates with whom I work can easily understand my work and have a good team working experience.",
+  },
+  {
+    title: "Planning",
+    description:
+      "I am able to understand and estimate how much time I require to get a job done, always trying to complete my work before its deadline.",
+  },
+];
+
+const languages = [
+  { name: "Spanish", level: "Native" },
+  { name: "Ukrainian", level: "Native" },
+  { name: "Russian", level: "Native" },
+  { name: "English", level: "Intermediate High (B2)" },
+  { name: "Polish", level: "Basic" },
+];
+---
+
+<section
+  id="personal"
+  class="mx-auto max-w-5xl px-6 py-24 border-t border-slate-200 dark:border-white/10 transition-colors"
+>
+  <span class="eyebrow font-mono text-xs font-medium text-slate-500">
+    05 — personal
+  </span>
+
+  <h2 class="mt-2 font-display text-3xl font-bold tracking-tight text-ink dark:text-white">
+    Personal Qualities & Languages
+  </h2>
+
+  <p class="mt-4 max-w-2xl text-slate-600 dark:text-slate-400">
+    Beyond technical skills, I value clear communication, thoughtful planning,
+    and collaborative development practices.
+  </p>
+
+  <!-- Personal Qualities -->
+  <div class="mt-12">
+    <h3 class="font-display text-xl font-semibold text-ink dark:text-white">
+      Personal Qualities
+    </h3>
+
+    <div class="mt-6 grid gap-6 md:grid-cols-2">
+      {qualities.map((quality) => (
+        <article class="rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-surface-dark p-6 shadow-sm transition-colors hover:border-accent dark:hover:border-accent-dark">
+          <h4 class="font-display text-lg font-semibold text-ink dark:text-white">
+            {quality.title}
+          </h4>
+
+          <p class="mt-3 text-sm leading-7 text-slate-600 dark:text-slate-400">
+            {quality.description}
+          </p>
+        </article>
+      ))}
+    </div>
+  </div>
+
+  <!-- Languages -->
+  <div class="mt-16">
+    <h3 class="font-display text-xl font-semibold text-ink dark:text-white">
+      Languages
+    </h3>
+
+    <div class="mt-6 rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-surface-dark overflow-hidden">
+      {languages.map((language) => (
+        <div class="flex items-center justify-between px-6 py-4 border-b last:border-0 border-slate-200 dark:border-white/10">
+          <span class="font-medium text-slate-800 dark:text-slate-200">
+            {language.name}
+          </span>
+
+          <span class="rounded-full bg-slate-100 dark:bg-white/5 px-3 py-1 text-xs font-mono text-slate-600 dark:text-slate-400">
+            {language.level}
+          </span>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

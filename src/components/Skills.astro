@@ -1,0 +1,168 @@
+---
+const skillCategories = [
+  {
+    title: "Architecture",
+    skills: [
+      "Design of clean and scalable layered architectures.",
+      "Development of containerized services communicating through REST APIs.",
+      "Relational database modeling and schema design.",
+    ],
+  },
+  {
+    title: "Authentication & Security",
+    skills: [
+      "Global authentication state management across applications.",
+      "Protected routes with role-based authorization.",
+      "Secure authentication flows using JWT access and refresh tokens.",
+    ],
+  },
+  {
+    title: "API & Data",
+    skills: [
+      "HTTP request and response interception.",
+      "Database interaction through Object-Relational Mappers (ORMs).",
+      "Transformation of API errors into clear, user-friendly feedback.",
+    ],
+  },
+  {
+    title: "Reliability & Automation",
+    skills: [
+      "Centralized and extensible error handling systems.",
+      "Robust validation and fault-tolerant application design.",
+      "Task automation using cron-based schedulers.",
+    ],
+  },
+  {
+    title: "User Experience",
+    skills: [
+      "Development of real-time chat interfaces with streamed responses.",
+      "Building responsive and maintainable frontend applications.",
+    ],
+  },
+  {
+    title: "Development Workflow",
+    skills: [
+      "Version control with Git.",
+      "Database migrations using Alembic.",
+      "Collaborative development using modern workflows.",
+    ],
+  },
+];
+
+const toolCategories = [
+  {
+    title: "Frontend",
+    tools: [
+      "React",
+      "Tailwind CSS",
+      "Vite",
+      "Axios",
+      "Fetch API",
+      "shadcn/ui",
+      "Kotlin",
+    ],
+  },
+  {
+    title: "Backend",
+    tools: [
+      "Python",
+      "FastAPI",
+      "SQLAlchemy",
+      "APScheduler",
+      "Pydantic",
+      "Java",
+      "Spring Boot",
+    ],
+  },
+  {
+    title: "Databases",
+    tools: [
+      "PostgreSQL",
+      "pgAdmin",
+      "Firebase",
+      "Alembic",
+    ],
+  },
+  {
+    title: "Other",
+    tools: [
+      "Git",
+      "Docker",
+      "GitHub Projects",
+      "Resend",
+      "Jinja2",
+    ],
+  },
+];
+---
+
+<section
+  id="skills"
+  class="mx-auto max-w-5xl border-t border-slate-200 px-6 py-24 transition-colors dark:border-white/10"
+>
+  <span class="eyebrow font-mono text-xs font-medium text-slate-500">
+    03 — skills & technologies
+  </span>
+
+  <h2 class="mt-2 font-display text-3xl font-bold tracking-tight text-ink dark:text-white">
+    Skills & Technologies
+  </h2>
+
+  <p class="mt-4 max-w-2xl text-slate-600 dark:text-slate-400">
+    Experience building modern full-stack applications with a focus on
+    scalability, maintainability, and secure software architecture.
+  </p>
+
+  <!-- Skills -->
+  <div class="mt-12">
+    <h3 class="font-display text-xl font-semibold text-ink dark:text-white">
+      Skills
+    </h3>
+
+    <div class="mt-6 grid gap-8 md:grid-cols-2">
+      {skillCategories.map((category) => (
+        <div class="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm transition-colors dark:border-white/10 dark:bg-surface-dark">
+          <h4 class="font-mono text-xs uppercase tracking-widest text-accent dark:text-accent-dark">
+            {category.title}
+          </h4>
+
+          <ul class="mt-4 space-y-3 text-sm leading-6 text-slate-600 dark:text-slate-300">
+            {category.skills.map((skill) => (
+              <li class="flex gap-3">
+                <span class="mt-2 h-1.5 w-1.5 rounded-full bg-accent dark:bg-accent-dark"></span>
+                <span>{skill}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- Tools -->
+  <div class="mt-16">
+    <h3 class="font-display text-xl font-semibold text-ink dark:text-white">
+      Tools & Technologies
+    </h3>
+
+    <div class="mt-6 grid gap-8 md:grid-cols-2">
+      {toolCategories.map((category) => (
+        <div>
+          <h4 class="font-mono text-xs uppercase tracking-widest text-slate-400">
+            {category.title}
+          </h4>
+
+          <div class="mt-4 flex flex-wrap gap-3">
+            {category.tools.map((tool) => (
+              <span
+                class="rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-700 shadow-sm transition-colors hover:border-accent hover:text-accent dark:border-white/10 dark:bg-surface-dark dark:text-slate-300 dark:hover:border-accent-dark dark:hover:text-accent-dark"
+              >
+                {tool}
+              </span>
+            ))}
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
