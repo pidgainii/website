@@ -43,6 +43,18 @@
             <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">Git</span>
             <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">GitHub Projects</span>
           </div>
+
+          <!-- Tarjeta clicable del título -->
+          <button
+            type="button"
+            onclick="document.getElementById('recommendation-dialog').showModal()"
+            class="group mt-4 inline-flex items-center gap-3 rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-surface-dark p-2 pr-4 hover:border-accent/40 dark:hover:border-accent-dark/40 transition"
+          >
+            <iframe src="/website/Letter.pdf" class="w-14 h-14 rounded-lg border border-slate-200 pointer-events-none" title="Letter of Recommendation"></iframe>
+            <span class="text-sm font-medium text-slate-600 dark:text-slate-300 group-hover:text-accent dark:group-hover:text-accent-dark transition">
+              Letter of Recommendation
+            </span>
+          </button>
         </div>
 
         <!-- AWS University Engagement Program -->
@@ -173,6 +185,43 @@
     <div class="relative max-h-[85vh]">
       <button type="button" onclick="document.getElementById('titulo-dialog').close()" class="absolute -top-3 -right-3 w-8 h-8 rounded-full bg-white dark:bg-surface-dark border border-slate-200 dark:border-white/10 flex items-center justify-center text-slate-600 dark:text-slate-300 shadow-md z-10">✕</button>
       <img src="/website/titulo.png" alt="AWS University Engagement Program certificate" class="w-full h-full max-h-[85vh] object-contain rounded-2xl shadow-2xl" />
+    </div>
+  </dialog>
+
+  <dialog
+    id="recommendation-dialog"
+    class="backdrop:bg-black/70 bg-white dark:bg-surface-dark p-0
+          w-[92vw] max-w-4xl h-[90vh] rounded-2xl overflow-hidden shadow-2xl fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+    onclick="if(event.target===this) this.close()"
+  >
+    <div class="flex flex-col h-full">
+
+      <!-- Header -->
+      <div class="flex items-center justify-between px-5 py-3
+                  border-b border-slate-200 dark:border-white/10">
+        <h2 class="font-semibold text-slate-800 dark:text-white">
+          Recommendation
+        </h2>
+
+        <button
+          type="button"
+          onclick="this.closest('dialog').close()"
+          class="w-8 h-8 rounded-full flex items-center justify-center
+                hover:bg-slate-100 dark:hover:bg-white/10
+                text-slate-500 dark:text-slate-300"
+          aria-label="Close"
+        >
+          ✕
+        </button>
+      </div>
+
+      <!-- PDF -->
+      <iframe
+        src="/website/Letter.pdf"
+        class="w-full flex-1 border-0"
+        title="Recommendation letter"
+      ></iframe>
+
     </div>
   </dialog>
 </section>
