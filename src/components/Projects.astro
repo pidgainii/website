@@ -5,6 +5,31 @@
   </h2>
 
   <div class="mt-12 grid gap-6 md:grid-cols-2">
+    <!-- Classica -->
+    <button
+      type="button"
+      onclick="document.getElementById('project-classica').showModal()"
+      class="group text-left cursor-pointer rounded-2xl border border-slate-200 dark:border-white/10 bg-white dark:bg-surface-dark p-8 shadow-sm hover:shadow-lg hover:border-accent/40 dark:hover:border-accent-dark/40 hover:-translate-y-1 transition-all flex flex-col justify-between"
+    >
+      <div>
+        <h3 class="font-display text-xl font-bold text-ink dark:text-white">Classica</h3>
+        <p class="mt-3 text-slate-600 dark:text-slate-400 text-sm leading-relaxed">
+          Classical Literature searching and review website with a big variety of books.
+        </p>
+      </div>
+      <div class="mt-6 flex items-center justify-between">
+        <div class="flex gap-2">
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">React</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">Python</span>
+          <span class="font-mono text-xs px-2.5 py-1 rounded-md bg-accent/10 dark:bg-accent-dark/10 text-accent dark:text-accent-dark font-medium">PostgreSQL</span>
+        </div>
+        <span class="flex items-center gap-1 text-sm font-medium text-accent dark:text-accent-dark opacity-0 group-hover:opacity-100 translate-x-[-4px] group-hover:translate-x-0 transition-all">
+          View project
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="2.5"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" /></svg>
+        </span>
+      </div>
+    </button>
+    
     <!-- Simulator -->
     <button
       type="button"
